@@ -38,7 +38,7 @@ A comprehensive toolkit for monitoring and trading CS2 skins across multiple pla
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ShnkeWeber/cs2-skins.git
 cd cs2-skins
 npm install
 cp .env.example .env
