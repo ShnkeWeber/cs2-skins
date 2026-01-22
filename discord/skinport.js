@@ -22,11 +22,12 @@ function init(client, onNotify) {
       for (const threadData of threads) {
         try {
           const thread = await discordClient.channels.fetch(threadData.threadId);
+          const salePriceInEUR = (sale.salePrice / 100).toFixed(2);
 
           await thread.send({
             content: `<@${threadData.userId}> Your tracked item is now tradable!\n\n` +
               `**${sale.marketName}**\n` +
-              `Price: **${sale.salePrice} EUR**\n` +
+              `Price: €${salePriceInEUR}\n` +
               `[View on Skinport](${buildItemUrl(sale)})`,
           });
 
